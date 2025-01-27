@@ -40,8 +40,10 @@ git clone https://github.com/ShmuelRonen/comfyui-deepseek-chat.git
     "deepseek_api_key": "your-api-key-here"
 }
 ```
+## Important
+**Check API availability on this site**:  [DeepSeek API status]([https://platform.deepseek.com/](https://status-deepseek-com.translate.goog/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=iw&_x_tr_pto=wapp)
 
-## Usage
+## Usage)) 
 
 ### Node Configuration
 
