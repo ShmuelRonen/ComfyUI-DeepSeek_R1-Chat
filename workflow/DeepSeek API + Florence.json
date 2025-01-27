@@ -1,0 +1,411 @@
+{
+  "last_node_id": 69,
+  "last_link_id": 57,
+  "nodes": [
+    {
+      "id": 65,
+      "type": "ShowText|pysssss",
+      "pos": [
+        397.10821533203125,
+        668.7053833007812
+      ],
+      "size": [
+        623.9373168945312,
+        510.29595947265625
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 53,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "No history available."
+      ]
+    },
+    {
+      "id": 6,
+      "type": "String Literal",
+      "pos": [
+        -447.31304931640625,
+        649.3887939453125
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            14
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "String Literal"
+      },
+      "widgets_values": [
+        "What is alien use the image description"
+      ]
+    },
+    {
+      "id": 66,
+      "type": "Florence2Run",
+      "pos": [
+        -130.9187774658203,
+        993.963134765625
+      ],
+      "size": [
+        400,
+        352
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 55
+        },
+        {
+          "name": "florence2_model",
+          "type": "FL2MODEL",
+          "link": 54
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "name": "caption",
+          "type": "STRING",
+          "links": [
+            56,
+            57
+          ],
+          "slot_index": 2
+        },
+        {
+          "name": "data",
+          "type": "JSON",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Florence2Run"
+      },
+      "widgets_values": [
+        "",
+        "more_detailed_caption",
+        true,
+        false,
+        1024,
+        3,
+        true,
+        "",
+        571033341957416,
+        "randomize"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "ComfyUIDeepSeekChat",
+      "pos": [
+        19.06648826599121,
+        650.279296875
+      ],
+      "size": [
+        315,
+        198
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 14,
+          "widget": {
+            "name": "prompt"
+          }
+        },
+        {
+          "name": "vision_description",
+          "type": "STRING",
+          "link": 56,
+          "widget": {
+            "name": "vision_description"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "latest_response",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "full_chat_history",
+          "type": "STRING",
+          "links": [
+            53
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ComfyUIDeepSeekChat"
+      },
+      "widgets_values": [
+        "instruct",
+        "Hello, how can I help you?",
+        1024,
+        false,
+        false,
+        "no",
+        ""
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 69,
+      "type": "ShowText|pysssss",
+      "pos": [
+        404.9180908203125,
+        1252.9072265625
+      ],
+      "size": [
+        440.9405822753906,
+        283.65472412109375
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 57,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "The image is a digital illustration of an alien standing in a desert-like landscape with mountains in the background. The alien is facing towards the left side of the image and appears to be looking off into the distance. It has a large, round head with a pointed nose and a large eye-like structure on top. The head is covered in intricate gears and cogs, giving it a futuristic and futuristic appearance. The body of the alien is made up of a dark blue-grey color, and it is wearing a leather jacket with gold accents. The jacket has a high collar and a zipper closure. The overall style of the illustration is reminiscent of steampunk or sci-fi."
+      ]
+    },
+    {
+      "id": 67,
+      "type": "DownloadAndLoadFlorence2Model",
+      "pos": [
+        -531.9019165039062,
+        1383.736328125
+      ],
+      "size": [
+        304.6877136230469,
+        109.15382385253906
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora",
+          "type": "PEFTLORA",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "florence2_model",
+          "type": "FL2MODEL",
+          "links": [
+            54
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DownloadAndLoadFlorence2Model"
+      },
+      "widgets_values": [
+        "microsoft/Florence-2-base",
+        "fp16",
+        "sdpa"
+      ]
+    },
+    {
+      "id": 68,
+      "type": "LoadImage",
+      "pos": [
+        -536.7076416015625,
+        995.2376098632812
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            55
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "0 (1).png",
+        "image"
+      ]
+    }
+  ],
+  "links": [
+    [
+      14,
+      6,
+      0,
+      14,
+      0,
+      "STRING"
+    ],
+    [
+      53,
+      14,
+      1,
+      65,
+      0,
+      "STRING"
+    ],
+    [
+      54,
+      67,
+      0,
+      66,
+      1,
+      "FL2MODEL"
+    ],
+    [
+      55,
+      68,
+      0,
+      66,
+      0,
+      "IMAGE"
+    ],
+    [
+      56,
+      66,
+      2,
+      14,
+      1,
+      "STRING"
+    ],
+    [
+      57,
+      66,
+      2,
+      69,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "DeepSeek-R1 Chat",
+      "bounding": [
+        -584.8081665039062,
+        491.8576965332031,
+        1743.1173095703125,
+        1072.619873046875
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6588450000000002,
+      "offset": [
+        1414.2816555154839,
+        -422.5738248710742
+      ]
+    },
+    "node_versions": {
+      "ComfyUI-Custom-Scripts": "d6657cc1f04539dbeea38d7bf6d73bc025004fa4",
+      "comfy-image-saver": "65e6903eff274a50f8b5cd768f0f96baf37baea1",
+      "ComfyUI-Florence2": "dffd12506d50f0540b8a7f4b36a05d4fb5fed2de",
+      "comfy-core": "0.3.10"
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0
+  },
+  "version": 0.4
+}
