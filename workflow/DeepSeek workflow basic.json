@@ -1,0 +1,192 @@
+{
+  "last_node_id": 65,
+  "last_link_id": 53,
+  "nodes": [
+    {
+      "id": 14,
+      "type": "ComfyUIDeepSeekChat",
+      "pos": [
+        19.06648826599121,
+        650.279296875
+      ],
+      "size": [
+        315,
+        198
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 14,
+          "widget": {
+            "name": "prompt"
+          }
+        },
+        {
+          "name": "vision_description",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "vision_description"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "latest_response",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0
+        },
+        {
+          "name": "full_chat_history",
+          "type": "STRING",
+          "links": [
+            53
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ComfyUIDeepSeekChat"
+      },
+      "widgets_values": [
+        "chat",
+        "Hello, how can I help you?",
+        4096,
+        false,
+        true,
+        "no",
+        ""
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 65,
+      "type": "ShowText|pysssss",
+      "pos": [
+        397.10821533203125,
+        668.7053833007812
+      ],
+      "size": [
+        623.9373168945312,
+        510.29595947265625
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 53,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "User: What is life in 50 words\n\nAssistant: Life is organized matter with cells, DNA, and metabolism. It grows, reproduces, and evolves via natural selection. Life requires energy, maintains homeostasis, responds to stimuli, and adapts. From single cells to complex beings, it’s diverse yet interconnected, driven by survival and reproduction, existing temporarily in the universe’s vastness.  \n\n*(Exactly 50 words.)*"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "String Literal",
+      "pos": [
+        -447.31304931640625,
+        649.3887939453125
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            14
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "String Literal"
+      },
+      "widgets_values": [
+        "What is life in 50 words"
+      ]
+    }
+  ],
+  "links": [
+    [
+      14,
+      6,
+      0,
+      14,
+      0,
+      "STRING"
+    ],
+    [
+      53,
+      14,
+      1,
+      65,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "DeepSeek-R1 Chat",
+      "bounding": [
+        -584.8081665039062,
+        491.8576965332031,
+        1700.4649658203125,
+        784.125732421875
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6588450000000008,
+      "offset": [
+        962.0987483074122,
+        -445.4260234085239
+      ]
+    },
+    "node_versions": {
+      "ComfyUI-Custom-Scripts": "d6657cc1f04539dbeea38d7bf6d73bc025004fa4",
+      "comfy-image-saver": "65e6903eff274a50f8b5cd768f0f96baf37baea1"
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0
+  },
+  "version": 0.4
+}
